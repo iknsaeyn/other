@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'other';
+  notiflix() {
+    Notify.info('😁');
+  }
 }
+
