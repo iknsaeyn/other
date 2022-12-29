@@ -8,7 +8,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 })
 export class AppComponent {
   notiflix() {
-    Notify.info('😁');
+    Notify.info('Ничего 😁');
   }
 }
 
