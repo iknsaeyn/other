@@ -13,6 +13,7 @@ export class CheckResolveComponent implements OnInit {
 
   ngOnInit(): void {
     this.query = this.route.snapshot.data['query']
+    console.log(this.query)
   }
 
 
