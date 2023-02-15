@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getService.getTodos().subscribe({
       next: (todos: any) => {
+        console.log(todos)
         this.todos = todos
       },
       error: () => console.log('Ошибка')
