@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/_servisecs/data.service';
 
 @Component({
@@ -6,12 +7,17 @@ import { DataService } from 'src/app/_servisecs/data.service';
   templateUrl: './show-post.component.html',
   styleUrls: ['./show-post.component.scss']
 })
-export class ShowPostComponent {
-  constructor(public dataService: DataService) { }
+export class ShowPostComponent implements OnInit {
+  constructor(public dataService: DataService, private activatedRoute: ActivatedRoute) { }
 
   posts: any
+  post: any
+  id: any
 
-  allPosts() {
-    this.dataService.getPosts().subscribe({ next: (res) => { this.posts = res } })
+  ngOnInit() {
+    this.dataService.getPosts().subscribe({ next: (res) => { res } })
+    this.id = this.activatedRoute.snapshot.paramMap.get('id')
+    this.post = this.dataService.dataI.find(x => x.id == this.id)
   }
+
 }
