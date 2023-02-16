@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from './_servisecs/data.service';
-import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',

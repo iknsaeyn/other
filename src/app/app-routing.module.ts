@@ -24,7 +24,7 @@ const routes: Routes = [
   {
     path: 'posts/:id/edit',
     component: EditComponent,
-    canActivateChild: [AccessGuard],
+    canActivate: [AccessGuard]
   }
 ];
 

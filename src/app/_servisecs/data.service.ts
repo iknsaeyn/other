@@ -8,7 +8,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  role: 'user' | 'admin' = 'admin'
+  role: 'user' | 'admin' = 'user'
+  id!: number
 
   getPosts() {
     return this.http.get('https://jsonplaceholder.typicode.com/posts')
@@ -28,4 +29,12 @@ export class DataService {
       "body": "voluptatem quisquam iste\nvoluptatibus natus officiis facilis dolorem\nquis quas ipsam\nvel et voluptatum in aliquid"
     },
   ]
+
+
+
+
+  askForId(num: number) {
+    this.id = num
+  }
+
 }
