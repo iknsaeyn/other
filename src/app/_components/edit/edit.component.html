@@ -1,5 +1,5 @@
 <div class="container-sm">
   Оглавление: <input name="name" type="text" [(ngModel)]="post.title" />
   <p>Основной текст: <input type="text" [(ngModel)]="post.body"></p>
-  <button (click)="rep()" class="btn btn-info">Применить</button>
+  <button routerLink="/posts" class="btn btn-info">Применить</button>
 </div>
