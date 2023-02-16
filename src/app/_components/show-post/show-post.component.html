@@ -1,4 +1,6 @@
 <div class="container-sm">
   Оглавление: {{post.title}}
   Основной текст: {{post.body}}
+  <p routerLink="edit" class="m-2"><button class="btn btn-info">Редоктировать</button></p>
 </div>
+<router-outlet></router-outlet>

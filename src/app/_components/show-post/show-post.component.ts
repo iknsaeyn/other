@@ -15,7 +15,6 @@ export class ShowPostComponent implements OnInit {
   id: any
 
   ngOnInit() {
-    this.dataService.getPosts().subscribe({ next: (res) => { res } })
     this.id = this.activatedRoute.snapshot.paramMap.get('id')
     this.post = this.dataService.dataI.find(x => x.id == this.id)
   }
