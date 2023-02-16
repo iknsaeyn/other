@@ -14,7 +14,6 @@ const routes: Routes = [
   {
     path: 'posts',
     component: PostsComponent,
-    canActivateChild: [AccessGuard],
     children: [
       {
         path: ':id',
@@ -24,7 +23,8 @@ const routes: Routes = [
   },
   {
     path: 'posts/:id/edit',
-    component: EditComponent
+    component: EditComponent,
+    canActivateChild: [AccessGuard],
   }
 ];
 

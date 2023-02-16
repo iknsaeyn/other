@@ -9,6 +9,7 @@ import { PostsComponent } from './_components/posts/posts.component';
 import { ShowPostComponent } from './_components/show-post/show-post.component';
 import { DataService } from './_servisecs/data.service';
 import { AccessGuard } from './_guards/access.guard';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AccessGuard } from './_guards/access.guard';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DataService, AccessGuard],
   bootstrap: [AppComponent]
