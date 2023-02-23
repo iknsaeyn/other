@@ -1,15 +1,4 @@
-<h3>Текущие значения</h3>
-{{ currentTodo| json }}
+{{todoItem | json}}
 
-<div
-  class="btn-group container"
-  role="group"
-  aria-label="Basic mixed styles example"
->
-  <button (click)="updateTodoState()" type="button" class="btn btn-danger">
-    Записать данные в хранилище
-  </button>
-  <button (click)="resetTodoState()" type="button" class="btn btn-warning">
-    Сбросить хранилище
-  </button>
-</div>
+<h1>Список дел</h1>
+<app-add-todo-item></app-add-todo-item>
