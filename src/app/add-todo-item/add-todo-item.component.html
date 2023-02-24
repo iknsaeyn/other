@@ -1,2 +1,14 @@
-<input type="text" formControlName="todo">
+<input type="input" [(ngModel)]="todoForm">
 <button class="btn btn-info" (click) ="addTodoItem()">Добавить</button>
+
+
+<div style="display:flex" *ngFor="let a of todoState.arr ; let i = index">
+    <div>
+        <input type="checkbox" (change)="press($event.target, i)"/>
+    </div>
+        <p [ngClass]="{ completed: a.completed }" >{{a.text}}</p>
+        <div>
+        <button (click) = "delete(i)" type="button" class="btn btn-danger" >
+              Удалить
+        </button>
+</div>

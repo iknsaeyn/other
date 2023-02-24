@@ -1,5 +1,6 @@
 export interface TodoInterface {
-    text?: string
+    text?: string,
+    id?: number
 }
 
 export class TodoUpdate {

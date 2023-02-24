@@ -8,17 +8,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoState } from './todo/todo.state';
 import { AddTodoItemComponent } from './add-todo-item/add-todo-item.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTodoItemComponent
+    AddTodoItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    CommonModule,
     NgxsModule.forRoot([TodoState]),
     NgxsLoggerPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot()

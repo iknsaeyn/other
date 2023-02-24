@@ -17,9 +17,6 @@ export class AppComponent implements OnInit{
   todoItem!: object
 
   ngOnInit() {
-    this.store.dispatch(new TodoUpdate({
-      text: 'Hello, wordl!'
-    }))
 
     this.store.select(TodoState.getTodo).subscribe({
       next:(value) => {
