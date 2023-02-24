@@ -1,14 +1,12 @@
-<input type="input" [(ngModel)]="todoForm">
-<button class="btn btn-info" (click) ="addTodoItem()">Добавить</button>
+<input type="input" [(ngModel)]="todoItem">
+<button class="btn btn-info" (click)="addTodoItem(todoItem)">Добавить</button>
 
 
-<div style="display:flex" *ngFor="let a of todoState.arr ; let i = index">
-    <div>
-        <input type="checkbox" (change)="press($event.target, i)"/>
-    </div>
-        <p [ngClass]="{ completed: a.completed }" >{{a.text}}</p>
-        <div>
-        <button (click) = "delete(i)" type="button" class="btn btn-danger" >
-              Удалить
-        </button>
-</div>
+<div style="display:flex" *ngFor="let el of todoState.arr ; let idx = index">
+  <div>
+    <input type="checkbox" (change)="actualTasks($event, idx)" />
+  </div>
+  <p style="margin-right: auto;" [ngClass]="{ pressed: el.completed }">{{el.text}}</p>
+  <div>
+    <button (click)="deleteTodoItem(idx)" type="button" class="btn btn-danger">Удалить</button>
+  </div>

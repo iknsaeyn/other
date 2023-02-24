@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Store} from '@ngxs/store'
+import { Store } from '@ngxs/store'
 import { TodoUpdate } from './TODO-STATE/model/todo.model';
 import { TodoState } from './TODO-STATE/todo.state';
 
@@ -9,20 +9,18 @@ import { TodoState } from './TODO-STATE/todo.state';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   constructor(
     private store: Store
-  ) {}
+  ) { }
 
-  todoItem!: object
+  // todoItem!: object
 
   ngOnInit() {
-
-    this.store.select(TodoState.getTodo).subscribe({
-      next:(value) => {
-        this.todoItem = value
-      }
-    })
+    //   this.store.select(TodoState.getTodo).subscribe({
+    //     next: (value) => {
+    //       this.todoItem = value
+    //     }
+    //   })
   }
-  
 }
