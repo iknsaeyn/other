@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Store} from '@ngxs/store'
-import { TodoUpdate } from './todo/model/todo.model';
-import { TodoState } from './todo/todo.state';
+import { TodoUpdate } from './TODO-STATE/model/todo.model';
+import { TodoState } from './TODO-STATE/todo.state';
 
 
 @Component({

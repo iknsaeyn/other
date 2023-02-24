@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store'
-import { TodoUpdate } from '../todo/model/todo.model';
-import { TodoState } from '../todo/todo.state';
+import { TodoUpdate } from '../TODO-STATE/model/todo.model';
+import { TodoState } from '../TODO-STATE/todo.state';
 
 @Component({
-  selector: 'app-add-todo-item',
-  templateUrl: './add-todo-item.component.html',
-  styleUrls: ['./add-todo-item.component.scss']
+  selector: 'app-add-todo',
+  templateUrl: './add-todo.component.html',
+  styleUrls: ['./add-todo.component.scss']
 })
-export class AddTodoItemComponent {
+export class AddTodoComponent {
   constructor(
     private store: Store,
     public todoState: TodoState
@@ -25,13 +25,11 @@ export class AddTodoItemComponent {
           }))
           this.todoForm = ''
           this.todoState.arr.push(this.store.selectSnapshot(TodoState.getTodo)) 
-          console.log(this.todoState.arr)
       }
 
     
   press(event: any, index: any){
-      console.log(event.checked);
-      let completedTask = this.todoState.arr.splice(index, 1)[0];
+    let completedTask = this.todoState.arr.splice(index, 1)[0];
     completedTask.completed = event.checked;
     if (!!completedTask.completed) {
       this.todoState.arr.push(completedTask);
@@ -47,10 +45,4 @@ export class AddTodoItemComponent {
       }
      })
     }
-
-
-
-
-    
-
 }

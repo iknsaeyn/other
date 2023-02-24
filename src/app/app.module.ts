@@ -6,17 +6,16 @@ import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoState } from './todo/todo.state';
-import { AddTodoItemComponent } from './add-todo-item/add-todo-item.component';
+import { TodoState } from './TODO-STATE/todo.state';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTodoItemComponent,
+    AddTodoComponent,
+    
   ],
   imports: [
     BrowserModule,
