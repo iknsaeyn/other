@@ -13,6 +13,5 @@ export class AppComponent implements OnInit {
       .subscribe(
         { next: (response: any) => { for (let a of response["products"]) { this.baseService.arr.push(a) } } }
       )
-    console.log(this.baseService.arr)
   }
 }

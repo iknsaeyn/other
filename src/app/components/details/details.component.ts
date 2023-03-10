@@ -18,8 +18,10 @@ export class DetailsComponent implements OnInit {
   num: any = 0
   obj: any = {}
   href: string = ''
+  id!: any
 
   ngOnInit(): void {
+    this.id = this.activeRouter.snapshot.paramMap.get('id')
     this.href = this.baseService.href
     this.num = this.activeRouter.snapshot.params
     this.baseService.getProduct(this.num).subscribe(

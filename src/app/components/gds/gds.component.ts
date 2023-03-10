@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { BaseService } from 'src/app/services/base.service';
 
 @Component({
@@ -8,5 +9,6 @@ import { BaseService } from 'src/app/services/base.service';
 })
 export class GdsComponent {
   constructor(public baseService: BaseService) { }
-
 }
+
+
