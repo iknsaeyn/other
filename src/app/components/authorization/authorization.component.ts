@@ -11,4 +11,13 @@ export class AuthorizationComponent {
     private baseService: BaseService
   ) { }
 
+  login: string = ''
+  password: string = ''
+
+  toComeIn() {
+    console.log(this.login, this.password)
+    this.baseService.understandTheRole(this.login, this.password)
+    console.log(this.baseService.role)
+
+  }
 }

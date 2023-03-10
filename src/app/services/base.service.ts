@@ -20,7 +20,7 @@ export class BaseService {
     if (login == 'atuny0' && passrod == '9uQFF1Lh') {
       this.role = 'user'
     }
-    if (login == 'hbingley1' && passrod == ' CQutx25i8r') {
+    if (login == 'hbingley1' && passrod == 'CQutx25i8r') {
       this.role = 'admin'
     }
   }

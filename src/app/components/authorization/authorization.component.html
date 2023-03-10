@@ -1,3 +1,5 @@
-<input type="text">
-<input type="text">
-<button>Войти</button>
+Логин
+<input [(ngModel)]="login" type="text">
+Пароль
+<input [(ngModel)]="password" type="text">
+<button (click)="toComeIn()">Войти</button>

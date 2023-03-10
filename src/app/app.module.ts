@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './components/details/details.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,14 @@ import { AuthorizationComponent } from './components/authorization/authorization
     MainPageComponent,
     DetailsComponent,
     CatalogComponent,
-    AuthorizationComponent
+    AuthorizationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
