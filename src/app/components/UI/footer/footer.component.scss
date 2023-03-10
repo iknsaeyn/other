@@ -4,12 +4,12 @@
   border: 0;
   font-family: Inter;
   text-decoration: none;
+  font-size: 14px;
 }
 
 li {
   list-style-type: none;
 }
-
 
 .container {
   width: 100%;
@@ -17,7 +17,30 @@ li {
   top: 0;
   z-index: 20;
   display: flex;
-  min-height: 64px;
   align-items: center;
   white-space: nowrap;
+  position: relative;
+}
+
+.footer-img {
+  margin: 54px 0 32px 0;
+}
+
+.footer_menu {
+  margin: 65px 0 0 375px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+.very_bottom {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.line {
+  background: #E5E7EB;
+  height: 1px;
+  margin-bottom: 32px;
 }

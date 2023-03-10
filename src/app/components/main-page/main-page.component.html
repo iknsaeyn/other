@@ -1,1 +1,15 @@
-<p>main-page works!</p>
+<div class="container">
+  <div class="declare">
+    Основные товары
+  </div>
+  <div class="card2"></div>
+  <div class="card1" *ngFor="let obj of this.baseService.arr">
+    <div *ngIf="obj.id < 11">
+      <img src="{{obj.thumbnail}}" alt="">
+      <div class="card-text">
+        <p>{{obj.title}}</p>
+        {{obj.price}}$
+      </div>
+    </div>
+  </div>
+</div>
