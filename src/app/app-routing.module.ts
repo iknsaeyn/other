@@ -8,6 +8,8 @@ import { GdsComponent } from './components/gds/gds.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { PersonalAccountComponent } from './components/personal-account/personal-account.component';
 import { ProductEditingComponent } from './components/product-editing/product-editing.component';
+import { AccessRoleAdminGuard } from './guards/access-role-admin.guard';
+import { AccessRoleUserGuard } from './guards/access-role-user.guard';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -21,16 +23,16 @@ const routes: Routes = [
     path: 'auth', component: AuthorizationComponent
   },
   {
-    path: 'profile', component: PersonalAccountComponent
+    path: 'profile', component: PersonalAccountComponent, canActivate: [AccessRoleUserGuard]
   },
   {
-    path: 'admin', component: AdministrationComponent
+    path: 'admin', component: AdministrationComponent, canActivate: [AccessRoleAdminGuard]
   },
   {
-    path: 'admin/items', component: GdsComponent
+    path: 'admin/items', component: GdsComponent, canActivate: [AccessRoleAdminGuard]
   },
   {
-    path: 'admin/items/:id', component: ProductEditingComponent
+    path: 'admin/items/:id', component: ProductEditingComponent, canActivate: [AccessRoleAdminGuard]
   }
 ];
 
