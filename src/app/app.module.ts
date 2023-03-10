@@ -14,6 +14,8 @@ import { AuthorizationComponent } from './components/authorization/authorization
 import { FormsModule } from '@angular/forms';
 import { PersonalAccountComponent } from './components/personal-account/personal-account.component';
 import { AdministrationComponent } from './components/administration/administration.component';
+import { GdsComponent } from './components/gds/gds.component';
+import { ProductEditingComponent } from './components/product-editing/product-editing.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { AdministrationComponent } from './components/administration/administrat
     AuthorizationComponent,
     PersonalAccountComponent,
     AdministrationComponent,
+    GdsComponent,
+    ProductEditingComponent,
   ],
   imports: [
     BrowserModule,

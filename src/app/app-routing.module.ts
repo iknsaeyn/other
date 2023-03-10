@@ -4,8 +4,10 @@ import { AdministrationComponent } from './components/administration/administrat
 import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { DetailsComponent } from './components/details/details.component';
+import { GdsComponent } from './components/gds/gds.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { PersonalAccountComponent } from './components/personal-account/personal-account.component';
+import { ProductEditingComponent } from './components/product-editing/product-editing.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -23,8 +25,13 @@ const routes: Routes = [
   },
   {
     path: 'admin', component: AdministrationComponent
+  },
+  {
+    path: 'admin/items', component: GdsComponent
+  },
+  {
+    path: 'admin/items/:id', component: ProductEditingComponent
   }
-
 ];
 
 @NgModule({
