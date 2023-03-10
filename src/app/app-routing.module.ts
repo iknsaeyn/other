@@ -6,14 +6,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
-  {
-    path: 'catalog/:id', component: CatalogComponent, children: [
-      {
-        path: 'details',
-        component: DetailsComponent
-      }
-    ]
-  },
+  { path: 'catalog', component: CatalogComponent }
+
 ];
 
 @NgModule({

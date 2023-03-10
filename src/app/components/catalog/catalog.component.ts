@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { BaseService } from 'src/app/services/base.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-catalog',
@@ -7,6 +6,5 @@ import { BaseService } from 'src/app/services/base.service';
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent {
-  constructor(public baseService: BaseService) { }
 
 }

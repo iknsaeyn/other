@@ -8,8 +8,8 @@ import { FooterComponent } from './components/UI/footer/footer.component';
 import { HeaderComponent } from './components/UI/header/header.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { CommonModule } from '@angular/common';
-import { CatalogComponent } from './components/catalog/catalog.component';
 import { DetailsComponent } from './components/details/details.component';
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { DetailsComponent } from './components/details/details.component';
     HeaderComponent,
     FooterComponent,
     MainPageComponent,
-    CatalogComponent,
-    DetailsComponent
+    DetailsComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
