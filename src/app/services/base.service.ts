@@ -12,8 +12,25 @@ export class BaseService {
 
   arr: any[] = []
 
+  href: string = ''
+
+  role!: 'user' | 'admin'
+
+  understandTheRole(login: string, passrod: string) {
+    if (login == 'atuny0' && passrod == '9uQFF1Lh') {
+      this.role = 'user'
+    }
+    if (login == 'hbingley1' && passrod == ' CQutx25i8r') {
+      this.role = 'admin'
+    }
+  }
+
   getProducts() {
     return this.http.get('https://dummyjson.com/products')
+  }
+
+  getProduct(num: any) {
+    return this.http.get('https://dummyjson.com/products/' + num.id)
   }
 
 }

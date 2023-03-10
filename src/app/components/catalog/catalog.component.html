@@ -3,11 +3,14 @@
     Основные товары
   </div>
   <div class="card2"></div>
+
   <div class="card1" *ngFor="let obj of this.baseService.arr">
-    <img src="{{obj.thumbnail}}" alt="">
-    <div class="card-text">
-      <p>{{obj.title}}</p>
-      {{obj.price}}$
-    </div>
+    <a routerLink="/catalog/{{obj.id}}/details">
+      <img src="{{obj.thumbnail}}" alt="">
+      <div class="card-text">
+        <p>{{obj.title}}</p>
+        {{obj.price}}$
+      </div>
+    </a>
   </div>
 </div>

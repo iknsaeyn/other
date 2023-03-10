@@ -10,6 +10,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './components/details/details.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
+import { AuthorizationComponent } from './components/authorization/authorization.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CatalogComponent } from './components/catalog/catalog.component';
     FooterComponent,
     MainPageComponent,
     DetailsComponent,
-    CatalogComponent
+    CatalogComponent,
+    AuthorizationComponent
   ],
   imports: [
     BrowserModule,
