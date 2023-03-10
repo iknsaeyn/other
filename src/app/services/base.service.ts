@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ResolveEnd } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,14 @@ export class BaseService {
 
   role!: 'user' | 'admin' | ''
   name: string = ''
-  account!: object
+
+  usr!: any
+
+  account!: any
+  token!: string
+
+
+
 
   understandTheRole(login: string, passrod: string) {
     if (login == 'atuny0' && passrod == '9uQFF1Lh') {
@@ -38,8 +46,8 @@ export class BaseService {
     return this.http.get('https://dummyjson.com/products/' + num.id)
   }
 
-  getUsers(login: string, password: string) {
-    return fetch('https://dummyjson.com/auth/login', {
+  getUsers = (login: string, password: string) => {
+    return new Promise((resolve, reject) => fetch('https://dummyjson.com/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -49,6 +57,20 @@ export class BaseService {
       })
     })
       .then(res => res.json())
+      .then(res => this.account = res)
+    )
+  }
+  getOneUser(id: number) {
+    return this.http.get(' https://dummyjson.com/users/' + id)
+  }
+  view(): any {
+    console.log(this.usr)
+    console.log(this.account)
+    console.log(this.token)
   }
 }
+
+
+
+
 

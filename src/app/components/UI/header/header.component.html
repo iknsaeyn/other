@@ -18,7 +18,7 @@
       </li>
     </ul>
   </nav>
-  <div *ngIf="baseService.role" class="admin">{{baseService.name}}{{baseService.role}}
+  <div *ngIf="baseService.role" class="admin"><a routerLink="/profile">{{baseService.name}}{{baseService.role}}</a>
     <button (click)="goOut()">Выйти</button>
   </div>
   <button *ngIf=" !baseService.role" routerLink="/auth" class="btn btn-primary">

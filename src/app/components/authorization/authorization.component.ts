@@ -15,16 +15,18 @@ export class AuthorizationComponent {
   password: string = ''
   account!: any
   id!: number
+  usr!: any
+
 
 
   toComeIn() {
     this.baseService.understandTheRole(this.login, this.password)
-
-    this.baseService.getUsers(this.login, this.password).then(
-      res => this.account = res
-    )
-    console.log(this.account)
+    this.baseService.getUsers(this.login, this.password)
   }
 }
 
+
+
+
 // 'atuny0' '9uQFF1Lh'
+
