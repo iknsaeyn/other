@@ -11,11 +11,13 @@ export class BaseService {
   ) { }
 
   arr: any[] = []
+  id!: number
 
   href: string = ''
 
   role!: 'user' | 'admin' | ''
   name: string = ''
+  account!: object
 
   understandTheRole(login: string, passrod: string) {
     if (login == 'atuny0' && passrod == '9uQFF1Lh') {
@@ -36,11 +38,17 @@ export class BaseService {
     return this.http.get('https://dummyjson.com/products/' + num.id)
   }
 
-  getUsers() {
-    return this.http.post('https://dummyjson.com/auth/login', JSON.stringify({
-      username: 'atuny0',
-      password: '9uQFF1Lh',
+  getUsers(login: string, password: string) {
+    return fetch('https://dummyjson.com/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+
+        username: login,
+        password: password,
+      })
     })
-    )
+      .then(res => res.json())
   }
 }
+

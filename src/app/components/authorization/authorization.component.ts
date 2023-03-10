@@ -13,17 +13,18 @@ export class AuthorizationComponent {
 
   login: string = ''
   password: string = ''
-  account!: object
+  account!: any
+  id!: number
 
 
   toComeIn() {
     this.baseService.understandTheRole(this.login, this.password)
-    this.baseService.getUsers().subscribe(
-      {
-        next: (response: any) => { this.account = response },
-        error: () => console.log('Ошибка')
-      }
 
+    this.baseService.getUsers(this.login, this.password).then(
+      res => this.account = res
     )
+    console.log(this.account)
   }
 }
+
+// 'atuny0' '9uQFF1Lh'
