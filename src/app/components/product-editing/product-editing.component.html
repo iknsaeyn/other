@@ -1,8 +1,8 @@
-<input type="text" value="{{baseService.arr[id-1].title}}">
-<input type="text" value="{{baseService.arr[id-1].description}}">
-<input type="text" value="{{baseService.arr[id-1].price}}">
-<input type="text" value="{{baseService.arr[id-1].brand}}">
-<input type="text" value="{{baseService.arr[id-1].rating}}">
+<input #title type="text" value="{{baseService.arr[id-1].title}}">
+<input #description type="text" value="{{baseService.arr[id-1].description}}">
+<input #price type="text" value="{{baseService.arr[id-1].price}}">
+<input #brand type="text" value="{{baseService.arr[id-1].brand}}">
+<input #rating type="text" value="{{baseService.arr[id-1].rating}}">
 {{baseService.arr[id-1].title}}
-<button>Сохранить</button>
+<button (click)="change()">Сохранить</button>
 <button>Закрыть</button>
