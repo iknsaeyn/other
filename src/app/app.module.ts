@@ -12,6 +12,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { FormsModule } from '@angular/forms';
+import { PersonalAccountComponent } from './components/personal-account/personal-account.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     DetailsComponent,
     CatalogComponent,
     AuthorizationComponent,
+    PersonalAccountComponent,
   ],
   imports: [
     BrowserModule,

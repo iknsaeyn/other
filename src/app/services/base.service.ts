@@ -14,14 +14,17 @@ export class BaseService {
 
   href: string = ''
 
-  role!: 'user' | 'admin'
+  role!: 'user' | 'admin' | ''
+  name: string = ''
 
   understandTheRole(login: string, passrod: string) {
     if (login == 'atuny0' && passrod == '9uQFF1Lh') {
       this.role = 'user'
+      this.name = login
     }
     if (login == 'hbingley1' && passrod == 'CQutx25i8r') {
       this.role = 'admin'
+      this.name = login
     }
   }
 
@@ -33,4 +36,11 @@ export class BaseService {
     return this.http.get('https://dummyjson.com/products/' + num.id)
   }
 
+  getUsers() {
+    return this.http.post('https://dummyjson.com/auth/login', JSON.stringify({
+      username: 'atuny0',
+      password: '9uQFF1Lh',
+    })
+    )
+  }
 }

@@ -18,7 +18,10 @@
       </li>
     </ul>
   </nav>
-  <button routerLink="/auth" class="btn btn-primary">
+  <div *ngIf="baseService.role" class="admin">{{baseService.name}}{{baseService.role}}
+    <button (click)="goOut()">Выйти</button>
+  </div>
+  <button *ngIf=" !baseService.role" routerLink="/auth" class="btn btn-primary">
     Войти
   </button>
 </div>
