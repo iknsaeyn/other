@@ -16,6 +16,7 @@ import { PersonalAccountComponent } from './components/personal-account/personal
 import { AdministrationComponent } from './components/administration/administration.component';
 import { GdsComponent } from './components/gds/gds.component';
 import { ProductEditingComponent } from './components/product-editing/product-editing.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProductEditingComponent } from './components/product-editing/product-ed
     AdministrationComponent,
     GdsComponent,
     ProductEditingComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

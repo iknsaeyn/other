@@ -4,6 +4,7 @@ import { AdministrationComponent } from './components/administration/administrat
 import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { DetailsComponent } from './components/details/details.component';
+import { ErrorComponent } from './components/error/error.component';
 import { GdsComponent } from './components/gds/gds.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { PersonalAccountComponent } from './components/personal-account/personal-account.component';
@@ -33,6 +34,12 @@ const routes: Routes = [
   },
   {
     path: 'admin/items/:id', component: ProductEditingComponent, canActivate: [AccessRoleAdminGuard]
+  },
+  {
+    path: 'error', component: ErrorComponent
+  },
+  {
+    path: '**', redirectTo: 'error'
   }
 ];
 

@@ -14,7 +14,7 @@ export class AccessRoleUserGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (this.baseService.role === 'user') {
+    if (this.baseService.role === 'user' || this.baseService.role == 'admin') {
       return true
     } else {
       return this.router.navigateByUrl('/auth')
