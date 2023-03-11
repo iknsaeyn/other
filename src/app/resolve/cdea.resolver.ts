@@ -10,7 +10,7 @@ import { BaseService } from '../services/base.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AdditionalLoadingResolver implements Resolve<boolean> {
+export class CdeaResolver implements Resolve<boolean> {
   constructor(
     private baseService: BaseService
   ) { }

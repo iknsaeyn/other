@@ -9,13 +9,15 @@ import { AuthorizationComponent } from '../authorization/authorization.component
   styleUrls: ['./personal-account.component.scss']
 })
 export class PersonalAccountComponent implements OnInit {
-  a!: any
+
   usr!: any
+  obj!: any
 
   constructor(public baseService: BaseService, private route: ActivatedRoute, private router: Router) { }
 
+
   ngOnInit(): void {
-    this.baseService.getOneUser(this.baseService.account.id).subscribe(
+    this.baseService.getOneUser(this.route.snapshot.data['usr'].id).subscribe(
       response => this.usr = response
     )
   }

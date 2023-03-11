@@ -12,6 +12,7 @@ import { ProductEditingComponent } from './components/product-editing/product-ed
 import { AccessRoleAdminGuard } from './guards/access-role-admin.guard';
 import { AccessRoleUserGuard } from './guards/access-role-user.guard';
 import { AdditionalLoadingResolver } from './resolve/additional-loading.resolver';
+import { CdeaResolver } from './resolve/cdea.resolver';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -22,10 +23,10 @@ const routes: Routes = [
     path: 'catalog/:id/details', component: DetailsComponent
   },
   {
-    path: 'auth', component: AuthorizationComponent
+    path: 'auth', component: AuthorizationComponent,
   },
   {
-    path: 'profile', component: PersonalAccountComponent, canActivate: [AccessRoleUserGuard]
+    path: 'profile', component: PersonalAccountComponent, canActivate: [AccessRoleUserGuard], resolve: { usr: AdditionalLoadingResolver }
   },
   {
     path: 'admin', component: AdministrationComponent, canActivate: [AccessRoleAdminGuard]
