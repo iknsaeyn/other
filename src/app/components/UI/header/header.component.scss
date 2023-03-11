@@ -65,6 +65,24 @@ a {
   line-height: 20px;
 }
 
-.block_2 {
+
+.admin {
+
+  float: left;
+  align-items: center;
+
   display: flex;
+}
+
+.btn-3 {
+  margin-left: 10px;
+}
+
+.btn-4 {
+  margin-left: 10px;
+}
+
+
+.ivs {
+  pointer-events: none;
 }

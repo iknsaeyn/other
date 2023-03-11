@@ -15,7 +15,6 @@ export class CatalogComponent {
 
   ngOnInit(): void {
     this.href = this.router.url;
-    console.log(this.router.url);
     this.baseService.href = this.href
   }
 

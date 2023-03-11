@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { BaseService } from 'src/app/services/base.service';
 import { AuthorizationComponent } from '../authorization/authorization.component';
 
@@ -11,15 +12,16 @@ export class PersonalAccountComponent implements OnInit {
   a!: any
   usr!: any
 
-  constructor(public baseService: BaseService) { }
+  constructor(public baseService: BaseService, private route: ActivatedRoute, private router: Router) { }
+
   ngOnInit(): void {
-    this.a = this.baseService.account
-    this.baseService.getOneUser(this.a.id).subscribe(
-      (response) => this.usr = response
+
+
+
+    this.baseService.getOneUser(this.route.snapshot.data['usr'].id).subscribe(
+      response => this.usr = response
     )
   }
-
 }
 
 
-// 'atuny0' '9uQFF1Lh'

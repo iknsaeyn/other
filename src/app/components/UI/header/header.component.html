@@ -19,13 +19,20 @@
     </ul>
   </nav>
   <div class="block_2">
-    <div *ngIf="baseService.role" class="admin"><a routerLink="/profile">
+    <div *ngIf="baseService.role" class="admin">
+      <a routerLink="/profile">
         <p>{{baseService.name}}</p>
-        <p> {{baseService.role}}</p>
+        <div style="font-size: 12px;" *ngIf="baseService.role=='admin'">Администратор</div>
+        <div style="font-size: 12px;" *ngIf="baseService.role=='user'">Покупатель</div>
       </a>
-      <button (click)="goOut()">Выйти</button>
+      <div><button routerLink="/admin" class="btn btn-success btn-4"
+          *ngIf="baseService.role=='admin'">Администрирование</button></div>
+      <div>
+        <button class="btn btn-success btn-3" (click)="goOut()">Выйти</button>
+      </div>
     </div>
-    <button *ngIf=" !baseService.role" routerLink="/auth" class="btn btn-primary">
+
+    <button *ngIf="!baseService.role" routerLink="/auth" class="btn btn-primary">
       Войти
     </button>
   </div>

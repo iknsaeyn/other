@@ -6,4 +6,4 @@
 <img src="{{usr.image}}" alt="">
 {{usr.ip}}
 
-<button routerLink="/admin"> Администрирование </button>
+<button *ngIf="baseService.role=='admin'" routerLink="/admin"> Администрирование </button>

@@ -11,6 +11,7 @@ import { PersonalAccountComponent } from './components/personal-account/personal
 import { ProductEditingComponent } from './components/product-editing/product-editing.component';
 import { AccessRoleAdminGuard } from './guards/access-role-admin.guard';
 import { AccessRoleUserGuard } from './guards/access-role-user.guard';
+import { AdditionalLoadingResolver } from './resolve/additional-loading.resolver';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
     path: 'auth', component: AuthorizationComponent
   },
   {
-    path: 'profile', component: PersonalAccountComponent, canActivate: [AccessRoleUserGuard]
+    path: 'profile', component: PersonalAccountComponent, canActivate: [AccessRoleUserGuard], resolve: { usr: AdditionalLoadingResolver }
   },
   {
     path: 'admin', component: AdministrationComponent, canActivate: [AccessRoleAdminGuard]

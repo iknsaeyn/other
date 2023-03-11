@@ -24,18 +24,23 @@ export class BaseService {
   account!: any
   token!: string
 
-  login: string = 'atuny0'
-  passrod: string = '9uQFF1Lh'
+  login!: string
+  password!: string
+
 
 
   understandTheRole(login: string, passrod: string) {
     if (login == 'atuny0' && passrod == '9uQFF1Lh') {
       this.role = 'user'
       this.name = login
+      this.login = login
+      this.password = passrod
     }
     if (login == 'hbingley1' && passrod == 'CQutx25i8r') {
       this.role = 'admin'
       this.name = login
+      this.login = login
+      this.password = passrod
     }
   }
 
@@ -48,7 +53,7 @@ export class BaseService {
   }
 
   getUsers = (login: string, password: string) => {
-    return new Promise((resolve, reject) => fetch('https://dummyjson.com/auth/login', {
+    return new Promise<any>((resolve, reject) => fetch('https://dummyjson.com/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -58,20 +63,10 @@ export class BaseService {
       })
     })
       .then(res => res.json())
-      .then(res => this.account = res)
+      .then(res => resolve(res))
     )
   }
   getOneUser(id: number) {
-    return this.http.get(' https://dummyjson.com/users/' + id)
-  }
-  view(): any {
-    console.log(this.usr)
-    console.log(this.account)
-    console.log(this.token)
+    return this.http.get('https://dummyjson.com/users/' + id)
   }
 }
-
-
-
-
-
