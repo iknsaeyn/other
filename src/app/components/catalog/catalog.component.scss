@@ -48,19 +48,25 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .card1 {
-    margin-left: 105px;
+  .card2 {
+    margin-left: 65px;
   }
 }
 
 @media screen and (max-width: 991px) {
-  .card1 {
-    margin-left: -20px;
+  .card2 {
+    margin-left: 128px;
   }
 }
 
 @media screen and (max-width: 766px) {
-  .card1 {
-    margin-left: -105px;
+  .card2 {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .card2 {
+    margin-left: 10px;
   }
 }

@@ -1,8 +1,24 @@
-<img src="{{obj.thumbnail}}" alt="">
-{{obj.title}}
-{{obj.description}}
-{{obj.price}}
-{{obj.rating}}
-{{obj.brand}}
+<div class="container">
+  <div class="wrapper">
+    <button routerLink="{{href}}" class="btn">Назад</button>
 
-<button routerLink="{{href}}" class=" btn">Назад</button>
+    <div class="cont3">
+      <div class="cont-2 card">
+        <img class="img" src="{{obj.thumbnail}}" alt="">
+        <div class="cont-2text">
+          Рейтинг: {{obj.rating}}
+        </div>
+      </div>
+
+      <div class="cont">
+        <p class="a">{{obj.title}}</p>
+        <p>{{obj.description}}</p>
+      </div>
+    </div>
+    <div class="block">
+      <p class="a">{{obj.brand}}</p>
+      <p>{{obj.price}} $</p>
+    </div>
+
+  </div>
+</div>

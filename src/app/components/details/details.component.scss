@@ -1,0 +1,76 @@
+.container {
+  float: none;
+
+}
+
+.btn {
+  background-color: #E0E7FF;
+  color: #4338CA;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  margin-right: 50px;
+  margin-bottom: 115px;
+  margin-left: -35px;
+}
+
+.img {
+  width: auto;
+  height: 150px;
+  margin-top: -80px;
+}
+
+.wrapper {
+  padding: 30px;
+  // display: flex;
+
+}
+
+.card {
+  border: none;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+
+.cont-2text {
+  text-align: center;
+  font-size: 14px;
+
+}
+
+.cont {
+  // display: flex;
+  max-width: 200px;
+  margin: 20px;
+}
+
+.cont-2 {
+  max-width: 290px;
+}
+
+.cont-3 {
+  display: flex;
+  float: left;
+  flex-direction: row;
+}
+
+.block {
+  position: relative;
+  left: 400px;
+  bottom: 650px;
+  left: 340px;
+  top: -260px;
+}
+
+.a {
+  font-weight: 600;
+}
