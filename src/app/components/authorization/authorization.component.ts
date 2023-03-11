@@ -27,8 +27,8 @@ export class AuthorizationComponent {
 
   async toComeIn() {
     this.baseService.understandTheRole(this.login, this.password)
-    // this.baseService.account = 
-    // console.log(this.baseService.account)
+    this.baseService.account = await this.baseService.getUsers(this.login, this.password)
+    console.log(this.baseService.account)
 
     // this.baseService.getOneUser(this.baseService.account.id).subscribe(
     //   (response) => this.usr = response

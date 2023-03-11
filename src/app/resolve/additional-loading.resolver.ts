@@ -14,11 +14,9 @@ export class AdditionalLoadingResolver implements Resolve<boolean> {
   constructor(
     private baseService: BaseService
   ) { }
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<any> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> {
 
-    return this.baseService.getUsers(this.baseService.login, this.baseService.password)
-    // this.baseService.getOneUser(this.baseService.account.id);
-    // this.baseService.getOneUser(this.baseService.account.id);
+    return this.baseService.getOneUser(this.baseService.account.id);
 
   }
 }

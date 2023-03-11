@@ -15,10 +15,7 @@ export class PersonalAccountComponent implements OnInit {
   constructor(public baseService: BaseService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-
-
-
-    this.baseService.getOneUser(this.route.snapshot.data['usr'].id).subscribe(
+    this.baseService.getOneUser(this.baseService.account.id).subscribe(
       response => this.usr = response
     )
   }

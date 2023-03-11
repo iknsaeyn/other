@@ -25,7 +25,7 @@ const routes: Routes = [
     path: 'auth', component: AuthorizationComponent
   },
   {
-    path: 'profile', component: PersonalAccountComponent, canActivate: [AccessRoleUserGuard], resolve: { usr: AdditionalLoadingResolver }
+    path: 'profile', component: PersonalAccountComponent, canActivate: [AccessRoleUserGuard]
   },
   {
     path: 'admin', component: AdministrationComponent, canActivate: [AccessRoleAdminGuard]
