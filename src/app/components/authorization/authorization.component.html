@@ -1,5 +1,21 @@
-Логин
-<input [(ngModel)]="login" type="text">
-Пароль
-<input [(ngModel)]="password" type="text">
-<button (click)="toComeIn()">Войти</button>
+<div class="container">
+  <div class="block">
+    <div class="block_2">
+      <div class="block_5">
+        <div style="display: inline-block;">
+          <img src="/assets/img/Mark.png" alt="">
+        </div>
+        <div style="display: inline-block;">
+          <h1>Вход в личный кабинет</h1>
+        </div>
+      </div>
+      <div>
+        <input placeholder=" Логин" [(ngModel)]="login" type="text">
+      </div>
+      <div>
+        <input placeholder="Пароль" [(ngModel)]="password" type="text">
+      </div>
+    </div>
+    <button class="btna" (click)="toComeIn()">Войти</button>
+  </div>
+</div>

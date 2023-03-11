@@ -9,10 +9,11 @@ import { BaseService } from 'src/app/services/base.service';
 export class AuthorizationComponent {
   constructor(
     private baseService: BaseService
-  ) { }
+  ) {
+  }
 
-  login: string = ''
-  password: string = ''
+  login: string = 'atuny0'
+  password: string = '9uQFF1Lh'
   account!: any
   id!: number
   usr!: any

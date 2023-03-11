@@ -24,7 +24,8 @@ export class BaseService {
   account!: any
   token!: string
 
-
+  login: string = 'atuny0'
+  passrod: string = '9uQFF1Lh'
 
 
   understandTheRole(login: string, passrod: string) {
