@@ -1,9 +1,49 @@
-<div class="text">Личный кабинет</div>
-{{usr.lastName}}
-{{usr.firstName}}
-{{usr.age}}
-{{usr.email}}
-<img src="{{usr.image}}" alt="">
-{{usr.ip}}
+<div class="container">
 
-<button *ngIf="baseService.role=='admin'" routerLink="/admin"> Администрирование </button>
+  <div class="text">Личный кабинет</div>
+  <div class="block">
+    <img class="img" src="{{usr.image}}" alt="">
+    <div class="t">
+      {{usr.firstName}}
+      {{usr.lastName}}
+    </div>
+  </div>
+
+
+  <div class="text2">Основная информация</div>
+  <div class="block_main">
+    <div class="block_1">
+      <div class="block_11">
+        <div class="text_t">
+          Возраст
+        </div>
+        <div class="text_tt">
+          {{usr.age}}
+        </div>
+      </div>
+    </div>
+    <div class="block_2">
+      <div class="block_22">
+        <div class="text_t">
+          Email
+        </div>
+        <div class="text_tt">
+          {{usr.email}}
+        </div>
+      </div>
+    </div>
+    <div class="block_3">
+      <div class="block_33">
+
+        <div class="text_t">
+          IP
+        </div>
+        <div class="text_tt">
+          {{usr.ip}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button *ngIf="baseService.role=='admin'" routerLink="/admin"> Администрирование </button>
+</div>

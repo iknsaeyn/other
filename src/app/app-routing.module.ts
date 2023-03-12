@@ -12,7 +12,6 @@ import { ProductEditingComponent } from './components/product-editing/product-ed
 import { AccessRoleAdminGuard } from './guards/access-role-admin.guard';
 import { AccessRoleUserGuard } from './guards/access-role-user.guard';
 import { AdditionalLoadingResolver } from './resolve/additional-loading.resolver';
-import { CdeaResolver } from './resolve/cdea.resolver';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },

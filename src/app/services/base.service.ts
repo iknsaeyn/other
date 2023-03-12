@@ -67,7 +67,6 @@ export class BaseService {
     )
   }
   getOneUser(id: number) {
-    console.log(id)
     return this.http.get('https://dummyjson.com/users/' + id)
   }
 }

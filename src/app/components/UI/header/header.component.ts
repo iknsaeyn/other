@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { BaseService } from 'src/app/services/base.service';
 import { AuthorizationComponent } from '../../authorization/authorization.component';
 
@@ -7,16 +8,13 @@ import { AuthorizationComponent } from '../../authorization/authorization.compon
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
-  constructor(
-    public baseService: BaseService,
-  ) { }
+export class HeaderComponent implements OnInit {
+  constructor(public baseService: BaseService, public route: ActivatedRoute, private router: Router) { }
 
   goOut() {
     this.baseService.role = ''
   }
-
-
-
+  ngOnInit(): void {
+  }
 
 }

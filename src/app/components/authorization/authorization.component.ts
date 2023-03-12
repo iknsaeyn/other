@@ -23,15 +23,7 @@ export class AuthorizationComponent {
 
   async toComeIn() {
     this.baseService.understandTheRole(this.login, this.password)
-
-    if (this.route.snapshot.data['usr'].token && this.baseService.account.role) {
-      this.router.navigateByUrl('/profile')
-    }
   }
-
-
-
-
 
   // 'atuny0' '9uQFF1Lh'
 }

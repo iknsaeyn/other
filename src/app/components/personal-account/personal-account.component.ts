@@ -17,9 +17,14 @@ export class PersonalAccountComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.baseService.getOneUser(this.route.snapshot.data['usr'].id).subscribe(
-      response => this.usr = response
-    )
+    if (this.route.snapshot.data['usr'].token && this.baseService.role) {
+      this.baseService.getOneUser(this.route.snapshot.data['usr'].id).subscribe(
+        response => this.usr = response
+      )
+    } else {
+      this.router.navigateByUrl('/auth')
+    }
+
   }
 }
 
