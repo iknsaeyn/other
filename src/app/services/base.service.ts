@@ -16,7 +16,7 @@ export class BaseService {
 
   href: string = ''
 
-  role!: 'user' | 'admin' | ''
+  role: 'user' | 'admin' | '' = 'admin'
   name: string = ''
 
   usr!: any
@@ -37,6 +37,7 @@ export class BaseService {
       this.name = login
       this.login = login
       this.password = passrod
+      this.err = false
     }
     else
       if (login == 'hbingley1' && passrod == 'CQutx25i8r') {
@@ -44,6 +45,7 @@ export class BaseService {
         this.name = login
         this.login = login
         this.password = passrod
+        this.err = false
       }
       else {
         this.err = true

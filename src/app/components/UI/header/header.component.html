@@ -25,8 +25,8 @@
         <div style="font-size: 12px;" *ngIf="baseService.role=='admin'">Администратор</div>
         <div style="font-size: 12px;" *ngIf="baseService.role=='user'">Покупатель</div>
       </a>
-      <div><button routerLink="/admin" class="btn btn-success btn-4"
-          *ngIf="baseService.role=='admin'">Администрирование</button></div>
+      <div><button routerLink="/admin" class="btn btn-4" *ngIf="baseService.role=='admin'">Администрирование</button>
+      </div>
       <div>
         <button class="btn btn-success btn-3" (click)="goOut()">Выйти</button>
       </div>

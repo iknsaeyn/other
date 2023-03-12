@@ -1,4 +1,35 @@
 <div class="container">
+  <div class="head">
+    Администрирование - Товары
+  </div>
+  <table class="table">
+    <thead>
+      <tr style="background-color: rgb(196, 187, 195); color: white;">
+        <th scope="col">НАЗВАНИЕ ТОВАРА</th>
+        <th scope="col">БРЕНД</th>
+        <th scope="col">ЦЕНА</th>
+        <th scope="col">РЕЙТИНГ</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let obj of this.baseService.arr">
+      <tr>
+        <th scope="row">{{obj.title}}</th>
+        <td>{{obj.brand}}</td>
+        <td>{{obj.price}}$</td>
+        <td style=" position: relative; padding-right: 8em;">{{obj.rating}}<a style="text-shadow: 0.3px 0px 0px #694646; color: rgb(160, 175, 184); font-weight: 500; position: absolute;
+          right: 0;
+          max-width: 8em;
+          min-height: 2em;
+    " routerLink="/admin/items/{{obj.id}}">Редактировать</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<!-- <div class="container">
   <div class="declare">
     Основные товары
   </div>
@@ -12,4 +43,4 @@
       </div>
     </a>
   </div>
-</div>
+</div> -->

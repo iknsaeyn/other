@@ -16,8 +16,8 @@ export class AuthorizationComponent {
 
   }
 
-  login: string = 'atuny0'
-  password: string = '9uQFF1Lh'
+  login: string = 'hbingley1'
+  password: string = 'CQutx25i8r'
 
 
 
@@ -26,4 +26,5 @@ export class AuthorizationComponent {
   }
 
   // 'atuny0' '9uQFF1Lh'
+  //'hbingley1' 'CQutx25i8r'
 }
