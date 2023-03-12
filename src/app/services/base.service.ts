@@ -16,7 +16,7 @@ export class BaseService {
 
   href: string = ''
 
-  role: 'user' | 'admin' | '' = 'admin'
+  role!: 'user' | 'admin' | ''
   name: string = ''
 
   usr!: any
