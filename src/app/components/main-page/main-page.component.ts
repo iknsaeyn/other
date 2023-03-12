@@ -14,8 +14,15 @@ export class MainPageComponent implements OnInit {
 
   href: string = ""
 
+  ten: any[] = []
+
+
   ngOnInit(): void {
     this.href = this.router.url;
     this.baseService.href = this.href
+    this.baseService.get10().subscribe(
+      { next: (response: any) => { for (let a of response["products"]) { this.ten.push(a) } } }
+    )
+
   }
 }

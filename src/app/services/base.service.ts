@@ -77,4 +77,8 @@ export class BaseService {
   getOneUser(id: number) {
     return this.http.get('https://dummyjson.com/users/' + id)
   }
+
+  get10() {
+    return this.http.get('https://dummyjson.com/products?limit=10')
+  }
 }
