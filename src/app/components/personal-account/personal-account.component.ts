@@ -14,9 +14,11 @@ export class PersonalAccountComponent implements OnInit {
   obj!: any
 
   constructor(public baseService: BaseService, private route: ActivatedRoute, private router: Router) { }
-
+  token!: string
 
   ngOnInit(): void {
+    this.token = this.route.snapshot.data['usr'].token
+    // console.log(this.token)
     if (this.route.snapshot.data['usr'].token && this.baseService.role) {
       this.baseService.getOneUser(this.route.snapshot.data['usr'].id).subscribe(
         response => this.usr = response
