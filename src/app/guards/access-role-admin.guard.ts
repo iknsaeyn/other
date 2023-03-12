@@ -14,7 +14,7 @@ export class AccessRoleAdminGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (this.baseService.role === 'admin') {
+    if (this.baseService.role === 'admin' && this.baseService.login && this.baseService.password) {
       return true
     } else {
       return this.router.navigateByUrl('/auth')
