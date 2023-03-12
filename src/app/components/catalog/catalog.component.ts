@@ -12,10 +12,15 @@ export class CatalogComponent {
 
 
   public href: string = ""
+  products: any[] = []
 
   ngOnInit(): void {
     this.href = this.router.url;
     this.baseService.href = this.href
+    this.baseService.getProducts()
+      .subscribe(
+        { next: (response: any) => { for (let a of response["products"]) { this.products.push(a) } } }
+      )
   }
 
 }
