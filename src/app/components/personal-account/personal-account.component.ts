@@ -18,7 +18,7 @@ export class PersonalAccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.token = this.route.snapshot.data['usr'].token
-    // console.log(this.token)
+    // НЕ ОЧЕНЬ ПОНЯЛ КАК ЭТО СДЕЛАТЬ ЧЕРЕЗ ПОСТ, РЕАЛИЗОВАЛ ЧЕРЕЗ ГЕТ. (ПОЛУЧЕНИЯ ПОЛНОЙ ИНФОРМАЦИИ О ПОЛЬЗОВАТЕЛЕ)
     if (this.route.snapshot.data['usr'].token && this.baseService.role) {
       this.baseService.getOneUser(this.route.snapshot.data['usr'].id).subscribe(
         response => this.usr = response

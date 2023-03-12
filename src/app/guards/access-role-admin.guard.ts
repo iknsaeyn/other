@@ -11,6 +11,7 @@ export class AccessRoleAdminGuard implements CanActivate {
     private baseService: BaseService,
     private router: Router
   ) { }
+  // ДОБАВИЛ && this.baseService.login && this.baseService.password ПОТОМУ ЧТО, КАК Я ПОНЯЛ ПО УСЛОВИЮ ЭТО НАДО, НО В МОЕМ КОДЕ ЭТО И ТАК ВСЕГДА ВЫПОЛНЯЕТСЯ ПРИ АВТОРИЗАЦИИ.
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
