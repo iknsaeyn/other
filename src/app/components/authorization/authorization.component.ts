@@ -9,7 +9,7 @@ import { BaseService } from 'src/app/services/base.service';
 })
 export class AuthorizationComponent {
   constructor(
-    private baseService: BaseService,
+    public baseService: BaseService,
     private router: Router,
     private route: ActivatedRoute
   ) {

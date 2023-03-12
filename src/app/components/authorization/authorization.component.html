@@ -10,12 +10,20 @@
         </div>
       </div>
       <div>
-        <input placeholder=" Логин" [(ngModel)]="login" type="text">
+        <input placeholder="Логин" [(ngModel)]="login" type="text">
       </div>
       <div>
-        <input placeholder="Пароль" [(ngModel)]="password" type="text">
+        <input required minlength="5" #name1="ngModel" name="name11" placeholder="Пароль" [(ngModel)]="password"
+          type="text">
       </div>
     </div>
     <button routerLink="/profile" class="btna" (click)="toComeIn()">Войти</button>
+
+    <div *ngIf="name1.hasError('minlength')" class="err">
+      Минимальная длина пароля 5 символов
+    </div>
+    <div *ngIf="baseService.err" class="err">
+      Неправильно указан логин и/или пароль.
+    </div>
   </div>
 </div>

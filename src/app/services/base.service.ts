@@ -27,6 +27,8 @@ export class BaseService {
   login!: string
   password!: string
 
+  err!: boolean
+
 
 
   understandTheRole(login: string, passrod: string) {
@@ -36,12 +38,16 @@ export class BaseService {
       this.login = login
       this.password = passrod
     }
-    if (login == 'hbingley1' && passrod == 'CQutx25i8r') {
-      this.role = 'admin'
-      this.name = login
-      this.login = login
-      this.password = passrod
-    }
+    else
+      if (login == 'hbingley1' && passrod == 'CQutx25i8r') {
+        this.role = 'admin'
+        this.name = login
+        this.login = login
+        this.password = passrod
+      }
+      else {
+        this.err = true
+      }
   }
 
   getProducts() {
