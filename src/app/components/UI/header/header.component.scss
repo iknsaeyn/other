@@ -85,8 +85,14 @@ a {
   font-weight: 600;
 }
 
+.admin {
+  margin-left: 5px;
+}
 
 
-.ivs {
-  pointer-events: none;
+
+@media screen and (max-width: 767px) {
+  .header_menu {
+    margin: 1px;
+  }
 }

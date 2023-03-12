@@ -16,8 +16,8 @@ export class AuthorizationComponent {
 
   }
 
-  login: string = 'hbingley1'
-  password: string = 'CQutx25i8r'
+  login: string = ''
+  password: string = ''
 
 
 
