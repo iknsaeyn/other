@@ -14,27 +14,27 @@ import { AccessRoleUserGuard } from './guards/access-role-user.guard';
 import { AdditionalLoadingResolver } from './resolve/additional-loading.resolver';
 
 const routes: Routes = [
-  { path: '', component: MainPageComponent },
+  { path: '', component: MainPageComponent, title: 'Основные товары' },
   {
-    path: 'catalog', component: CatalogComponent,
+    path: 'catalog', component: CatalogComponent, title: 'Каталог товаров'
   },
   {
-    path: 'catalog/:id/details', component: DetailsComponent
+    path: 'catalog/:id/details', component: DetailsComponent, title: 'Подробно о товаре'
   },
   {
-    path: 'auth', component: AuthorizationComponent,
+    path: 'auth', component: AuthorizationComponent, title: 'Вход в личный кабинет'
   },
   {
-    path: 'profile', component: PersonalAccountComponent, canActivate: [AccessRoleUserGuard], resolve: { usr: AdditionalLoadingResolver }
+    path: 'profile', component: PersonalAccountComponent, title: 'Профиль', canActivate: [AccessRoleUserGuard], resolve: { usr: AdditionalLoadingResolver }
   },
   {
-    path: 'admin', component: AdministrationComponent, canActivate: [AccessRoleAdminGuard]
+    path: 'admin', component: AdministrationComponent, title: 'Меню адм.', canActivate: [AccessRoleAdminGuard]
   },
   {
-    path: 'admin/items', component: GdsComponent, canActivate: [AccessRoleAdminGuard]
+    path: 'admin/items', component: GdsComponent, title: 'Товары адм.', canActivate: [AccessRoleAdminGuard]
   },
   {
-    path: 'admin/items/:id', component: ProductEditingComponent, canActivate: [AccessRoleAdminGuard]
+    path: 'admin/items/:id', component: ProductEditingComponent, title: 'Товары адм. редактирование', canActivate: [AccessRoleAdminGuard]
   },
   {
     path: 'error', component: ErrorComponent

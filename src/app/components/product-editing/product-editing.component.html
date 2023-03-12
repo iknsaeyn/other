@@ -1,8 +1,35 @@
-<input #title type="text" value="{{baseService.arr[id-1].title}}">
-<input #description type="text" value="{{baseService.arr[id-1].description}}">
-<input #price type="text" value="{{baseService.arr[id-1].price}}">
-<input #brand type="text" value="{{baseService.arr[id-1].brand}}">
-<input #rating type="text" value="{{baseService.arr[id-1].rating}}">
-{{baseService.arr[id-1].title}}
-<button (click)="change()">Сохранить</button>
-<button>Закрыть</button>
+<div class="container">
+
+  <div class="main_text">
+    Администрирование - Редактирование товара
+  </div>
+  <div class="f">
+    <div class="title1">{{baseService.arr[id-1].title}}</div>
+    <div class="contaner_texts">
+      <div class="text">
+        <div class="t">Название товара</div>
+        <input class="title" #title type="text" value="{{baseService.arr[id-1].title}}">
+      </div>
+      <div class="text">
+        <div class="t">Краткое описание</div>
+        <input class="description" #description type="text" value="{{baseService.arr[id-1].description}}">
+      </div>
+      <div class="text">
+        <div class="t">Цена</div>
+        <input class="price" #price type="text" value="{{baseService.arr[id-1].price}}">
+      </div>
+      <div class="text">
+        <div class="t">Бренд</div>
+        <input class="brand" #brand type="text" value="{{baseService.arr[id-1].brand}}">
+      </div>
+      <div class="text">
+        <div class="t">Рейтинг</div>
+        <input class="rating" #rating type="text" value="{{baseService.arr[id-1].rating}}">
+      </div>
+    </div>
+  </div>
+  <div class="buttons">
+    <button routerLink="/admin/items/" class="btn2">Закрыть</button>
+    <button routerLink="/admin/items/" class="btn1" (click)="change()">Сохранить</button>
+  </div>
+</div>
